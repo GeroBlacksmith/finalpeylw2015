@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Tienda de ropa</title>
+		<meta name="author" content="Gero" />
+		<link rel="stylesheet" type="text/css" href="estilo.css" media="screen"/>
+		<script type="text/javascript" src="funciones.js">
+        	a = 0;
+        	item = {
+        		imgsrc: "#",
+        		titulo: "Nada",
+        		precio: 48
+        	};
+        	function comprarr(item){
+        		console.log(item);
+        	}
+        </script>
+		<!-- Date: 2015-01-27 -->
+	</head>
+	<body onload="main();">
+		<div id="mainmenu">
+			<a id="home" href="index.html">inicio</a>
+			<UL>
+				
+				<li>
+					<a href="pagina1.html">hombros descubiertos</a>
+				</li>
+				<li>
+					<a href="pagina2.html">chaqueta liviana</a>
+				</li>
+				<li>
+					<a href="pagina3.html">joyeria</a>
+				</li>
+				<li>										
+					<a href="pagina4.html">chalecos con capucha</a>
+				</li>
+				<li>
+					<a href="pagina5.html">sweaters</a>
+				</li>
+				<li>
+					<a href="pagina6.html">vestidos</a>
+				</li>
+				
+			</UL>
+		</div>
+		<div id="catalogotable" >
+		<table onclick="comprar(item);">
+        	<th colspan="3">sun dresses</th>
+        	<tr>
+        		<td onmouseover="item.imgsrc = 'catalogo/6/125586561.jpg';
+        		item.titulo='Choies Orange Cross Cut Out Back Sundress';
+        		item.precio=20;">
+        			<img src="catalogo/6/125586561.jpg"><br />
+        			<p>Choies Orange Cross Cut Out Back Sundress</p>
+        			<p>$20 $20 CHOIES.COM</p>
+        		</td>
+        		<td onmouseover="item.imgsrc = 'catalogo/6/127689227.jpg';
+        		item.titulo='Sundress Alaia Maxi Beach Dress - Black/Turquoise';
+        		item.precio=184;">
+        			<img src="catalogo/6/127689227.jpg"><br />
+        			<p>Sundress Alaia Maxi Beach Dress - Black/Turquoise</p>
+					<p>$184 SHOPBOP.COM</p>
+        		</td>
+        		<td onmouseover="item.imgsrc = 'catalogo/6/128048522.jpg';
+        		item.titulo='HOUSE OF HOLLAND Distressed denim dress';
+        		item.precio=350;">
+        			<img src="catalogo/6/128048522.jpg"><br />
+        			<p>HOUSE OF HOLLAND Distressed denim dress</p>
+					<p>$350 MATCHESFASHION.COM</p>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td onmouseover="item.imgsrc = 'catalogo/6/128511758.jpg';
+        		item.titulo='TOPSHOP MOTO Babydoll Sundress';
+        		item.precio=28;">
+        			<img src="catalogo/6/128511758.jpg">
+        			<p>TOPSHOP MOTO Babydoll Sundress</p>
+					<p>£28 TOPSHOP.COM</p>
+				</td>
+        		<td onmouseover="item.imgsrc = 'catalogo/6/128597958.jpg';
+        		item.titulo='ModCloth Festival Short Length Sleeveless Drop Waist Forever';
+        		item.precio=50;">
+					<img src="catalogo/6/128597958.jpg">
+					<p>ModCloth Festival Short Length Sleeveless Drop Waist Forever</p>
+					<p>$50 MODCLOTH.COM</p>
+				</td>
+        		<td onmouseover="item.imgsrc = 'catalogo/6/129594603.jpg';
+        		item.titulo='Chicnova Fashion Sleeveless Dresses Casual Sundresses';
+        		item.precio=17;">
+        			<img src="catalogo/6/129594603.jpg">
+        			<p>Chicnova Fashion Sleeveless Dresses Casual Sundresses</p>
+					<p>$17 CHICNOVA.COM</p>
+        		</td>
+        	</tr>
+        	
+        </table>
+        </div>
+        <div id="formulariocompra">
+        	<table>
+        		<tr>
+        			<td>
+        		<div id="formleft">
+        		<img src="" id="imagencompra" /><br />
+        		<p id="descripcioncompra"> </p><br />
+        		<p  id="preciocompra"> </p><br />
+        		<p id="cuotascompra"> </p><br />
+        		</div>
+        		</td>
+        		<td>
+        		<form id="tpfinal">
+        			
+        		
+        		<div id="formright">
+        		CANTIDAD:<input type="button" value="-" onclick="menosCantidad(item.precio);"/><input type="text" id="cantidad" disabled value="1"/><input type="button" value="+" onclick="masCantidad(item.precio);"/><br />
+        		
+        		
+        		
+        		TIPO DE PAGO:<br />
+        		<input type="radio" id="radiocontado" name="tipodepago" value="contado" checked onchange="radioCred(item.precio);"/>contado<br />
+        		<input type="radio" id="radiocredito" name="tipodepago" value="credito" onchange="radioCred(item.precio);"/>credito<br />
+        		<input type="radio" class="credradio" name="credcar" value="cred1"/><img class="credradio" src="credcard/1.png" />
+        		<input type="radio" class="credradio" name="credcar" value="cred2"/><img class="credradio" src="credcard/2.png" />
+        		<input type="radio" class="credradio" name="credcar" value="cred3"/><img class="credradio" src="credcard/3.png" />
+        		<input type="radio" class="credradio" name="credcar" value="cred4"/><img class="credradio" src="credcard/4.png" /><br />
+        		
+        		<input type="text" class="etiquetas" disabled value="NOMBRE:" /><input type="text" id="nombrecompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="FECHA DE NACIMIENTO:"/><input type="text" id="fechacompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="MAIL:"/><input type="text" id="mailcompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="TELEFONO:" /><input   type="text" id="telefonocompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="DIRECCION:" /><input type="text" id="direccioncompra" onclick="blanquear();"/><br />
+        		<input type="button"  value="COMPRAR" onclick="efectuarCompra();"/><br />
+        		<input type="button" id="backbutton" value="VOLVER" onclick="cancelarCompra();" /><br />
+        		</div>	
+        	</form>	
+        	<select id="selectcuota" onchange="cuotasOnChange();">
+        			<option value="1cuota">1 Cuota </option>
+        			<option value="3cuota">3 Cuotas </option>
+        			<option value="6cuota">6 Cuotas </option>
+        	</select><br />
+        	</td>
+        	</tr>
+        	</table>
+        </div>
+        <div id="pie">
+        	<a class="apie" href="#autor">Gero</a>
+        	<a class="apie" href="#materia">Pelw</a>
+        	<a class="apie" href="#carrera">Tecnicatura en diseño web.</a>
+        	<a class="apie" href="#fecha">Febrero 2015</a>
+        </div>
+	</body>
+</html>
+

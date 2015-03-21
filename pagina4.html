@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Tienda de ropa4</title>
+		<meta name="author" content="Gero" />
+		<link rel="stylesheet" type="text/css" href="estilo.css" media="screen"/>
+		<script type="text/javascript" src="funciones.js">
+        	a = 0;
+        	item = {
+        		imgsrc: "#",
+        		titulo: "Nada",
+        		precio: 48
+        	};
+        </script>
+		<!-- Date: 2015-01-27 -->
+	</head>
+	<body onload="main();">
+		<div id="mainmenu">
+			
+			<a id="home" href="index.html">inicio</a>
+			<UL>
+				
+				<li>
+					<a href="pagina1.html">hombros descubiertos</a>
+				</li>
+				<li>
+					<a href="pagina2.html">chaqueta liviana</a>
+				</li>
+				<li>
+					<a href="pagina3.html">joyeria</a>
+				</li>
+				<li>										
+					<a href="pagina4.html">chalecos con capucha</a>
+				</li>
+				<li>
+					<a href="pagina5.html">sweaters</a>
+				</li>
+				<li>
+					<a href="pagina6.html">vestidos</a>
+				</li>
+				
+			</UL>
+		</div>
+		<div id="catalogotable" >
+		<table  onclick="comprar(item);">
+        	<th colspan="3">hooded vests</th>
+        	<tr>
+        		<td onmouseover="item.imgsrc = 'catalogo/4/118675227.jpg';
+        		item.titulo='Chicwish Chicwish Faux Fur Hooded Quilt Vest in Black';
+        		item.precio=65">
+        			<img src="catalogo/4/118675227.jpg"><br />
+        			<p>Chicwish Chicwish Faux Fur Hooded Quilt Vest in Black</p>
+        			<p>$65 $77 CHICWISH.COM</p>
+        		</td>
+        		<td onmouseover="item.imgsrc = 'catalogo/4/122876784.jpg';
+        		item.titulo='Faux-Fur Collar Hooded Padded Vest';
+        		item.precio=36">
+        			<img src="catalogo/4/122876784.jpg"><br />
+        			<p>Faux-Fur Collar Hooded Padded Vest</p>
+        			<p>$36 $40 YESSTYLE.COM</p>
+        		</td>
+        		<td onmouseover="item.imgsrc = 'catalogo/4/124496281.jpg';
+        		item.titulo='Enchanting Sleeveless Hooded Collar Solid White Waistcoat';
+        		item.precio=15;">
+        			<img src="catalogo/4/124496281.jpg"><br />
+        			<p>Enchanting Sleeveless Hooded Collar Solid White Waistcoat</p>
+        			<p>$15 $16 ROSEWE.COM</p>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td onmouseover="item.imgsrc = 'catalogo/4/125097676.jpg';
+        		item.titulo='22/4 By Stephanie Hahn artificial fur gilet';
+        		item.precio=340;">
+        			<img src="catalogo/4/125097676.jpg">
+        			<p>22/4 By Stephanie Hahn artificial fur gilet</p>
+					<p>$340 FARFETCH.COM</p>
+				</td>
+        		<td onmouseover="item.imgsrc = 'catalogo/4/126077264.jpg';
+        		item.titulo='Detachable Hoodied Camel Vest';
+        		item.precio=27;">
+					<img src="catalogo/4/126077264.jpg">
+					<p>Detachable Hoodied Camel Vest</p>
+					<p>$27 $52 ROMWE.COM</p>
+				</td>
+        		<td onmouseover="item.imgsrc = 'catalogo/4/128738494.jpg';
+        		item.titulo='Rotita Chic Hooded Collar Light Grey Waistcoat';
+        		item.precio=16;">
+        			<img src="catalogo/4/128738494.jpg">
+        			<p>Rotita Chic Hooded Collar Light Grey Waistcoat</p>
+					<p>$16 $16 ROTITA.COM</p>
+        		</td>
+        	</tr>
+        	
+        </table>
+        </div>
+        <div id="formulariocompra">
+        	<table>
+        		<tr>
+        			<td>
+        		<div id="formleft">
+        		<img src="" id="imagencompra" /><br />
+        		<p id="descripcioncompra"> </p><br />
+        		<p  id="preciocompra"> </p><br />
+        		<p id="cuotascompra"> </p><br />
+        		</div>
+        		</td>
+        		<td>
+        		<form id="tpfinal">
+        			
+        		
+        		<div id="formright">
+        		CANTIDAD:<input type="button" value="-" onclick="menosCantidad(item.precio);"/><input type="text" id="cantidad" disabled value="1"/><input type="button" value="+" onclick="masCantidad(item.precio);"/><br />
+        		
+        		
+        		
+        		TIPO DE PAGO:<br />
+        		<input type="radio" id="radiocontado" name="tipodepago" value="contado" checked onchange="radioCred(item.precio);"/>contado<br />
+        		<input type="radio" id="radiocredito" name="tipodepago" value="credito" onchange="radioCred(item.precio);"/>credito<br />
+        		<input type="radio" class="credradio" name="credcar" value="cred1"/><img class="credradio" src="credcard/1.png" />
+        		<input type="radio" class="credradio" name="credcar" value="cred2"/><img class="credradio" src="credcard/2.png" />
+        		<input type="radio" class="credradio" name="credcar" value="cred3"/><img class="credradio" src="credcard/3.png" />
+        		<input type="radio" class="credradio" name="credcar" value="cred4"/><img class="credradio" src="credcard/4.png" /><br />
+        		
+        		<input type="text" class="etiquetas" disabled value="NOMBRE:" /><input type="text" id="nombrecompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="FECHA DE NACIMIENTO:"/><input type="text" id="fechacompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="MAIL:"/><input type="text" id="mailcompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="TELEFONO:" /><input   type="text" id="telefonocompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="DIRECCION:" /><input type="text" id="direccioncompra" onclick="blanquear();"/><br />
+        		<input type="button"  value="COMPRAR" onclick="efectuarCompra();"/><br />
+        		<input type="button" id="backbutton" value="VOLVER" onclick="cancelarCompra();" /><br />
+        		</div>	
+        	</form>	
+        	<select id="selectcuota" onchange="cuotasOnChange();">
+        			<option value="1cuota">1 Cuota </option>
+        			<option value="3cuota">3 Cuotas </option>
+        			<option value="6cuota">6 Cuotas </option>
+        	</select><br />
+        	</td>
+        	</tr>
+        	</table>
+        </div>
+        <div id="pie">
+        	<a class="apie" href="#autor">Gero</a>
+        	<a class="apie" href="#materia">Pelw</a>
+        	<a class="apie" href="#carrera">Tecnicatura en diseño web.</a>
+        	<a class="apie" href="#fecha">Febrero 2015</a>
+        </div>
+	</body>
+</html>
+

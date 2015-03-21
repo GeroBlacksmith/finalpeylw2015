@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Tienda de Ropa</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
+        <script type="text/javascript" src="funciones.js">
+        	a = 0;
+        	item = {
+        		imgsrc: "#",
+        		titulo: "Nada",
+        		precio: 0
+        	};
+        	/**
+ 			* @author Gerardo Herrera
+ 			* Para el final de la materia 
+ 			* "Programacion estatica y laboratorio web"
+ 			* de la carrera "Tecnicatura universitaria de desarrollo web"
+ 			* Febrero 2015
+ 			*/
+        </script>
+    </head>
+    <body onload="main();">
+    	<div id="mainmenu">
+			<a id="home" href="index.html">inicio</a>
+			<UL>
+				
+				<li>
+					<a href="pagina1.html">hombros descubiertos</a>
+				</li>
+				<li>
+					<a href="pagina2.html">chaqueta liviana</a>
+				</li>
+				<li>
+					<a href="pagina3.html">joyeria</a>
+				</li>
+				<li>										
+					<a href="pagina4.html">chalecos con capucha</a>
+				</li>
+				<li>
+					<a href="pagina5.html">sweaters</a>
+				</li>
+				<li>
+					<a href="pagina6.html">vestidos</a>
+				</li>
+				
+			</UL>
+		</div>
+		<div id="catalogotable">
+        <table  onclick="comprar(item);">
+        	<th colspan="3">cold shoulder dresses</th>
+        	<tr>
+        		
+        		<td onmouseover="item.imgsrc = 'catalogo/1/125355313.jpg';
+        		item.titulo='chicwish flowing mint dip dyed';
+        		item.precio=48;">
+        			<img src="catalogo/1/125355313.jpg"><br />
+        			<p>chicwish flowing mint dip dyed</p>
+        			<p>$48 $57 CHICWISH.COM</p>
+        		</td>
+        		
+        		<td onmouseover="item.imgsrc = 'catalogo/1/125585215.jpg';
+        		item.titulo='choies cold shoulder wrap maxi';
+        		item.precio=38;">
+        			<img src="catalogo/1/125585215.jpg"><br />
+        			<p>choies cold shoulder wrap maxi</p>
+        			<p>$38 $48 CHOIES.COM</p>
+        		</td>
+        		
+        		<td onmouseover="item.imgsrc = 'catalogo/1/126056757.jpg';
+        		item.titulo='love womens cold shoulder midi';
+        		item.precio=19;">
+        			<img src="catalogo/1/126056757.jpg"><br />
+        			<p>love womens cold shoulder midi</p>
+        			<p>£19 £38 THEHUT.COM</p>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td onmouseover="item.imgsrc = 'catalogo/1/127645527.jpg';
+        		item.titulo='asos scuba debutante bardot frill';
+        		item.precio=76;">
+        			<img src="catalogo/1/127645527.jpg">
+        			<p>asos scuba debutante bardot frill</p>
+        			<p>$76 ASOS.COM</p>
+				</td>
+        		<td onmouseover="item.imgsrc = 'catalogo/1/127954369.jpg';
+        		item.titulo='topshop frilly cold shoulder dress';
+        		item.precio=45;">
+					<img src="catalogo/1/127954369.jpg">
+					<p>topshop frilly cold shoulder dress</p>
+					<p>£45 TOPSHOP.COM</p>
+				</td>
+        		<td onmouseover="item.imgsrc = 'catalogo/1/129526637.jpg';
+        		item.titulo='green cold shoulder long sleeve';
+        		item.precio=20;">
+        			<img src="catalogo/1/129526637.jpg">
+        			<p>green cold shoulder long sleeve</p>
+        			<p>$20 $29 SHEINSIDE.COM</p>
+        		</td>
+        	</tr>
+        	
+        </table>
+        </div>
+        <div id="formulariocompra">
+        	<table>
+        		<tr>
+        			<td>
+        		<div id="formleft">
+        		<img src="" id="imagencompra" /><br />
+        		<p id="descripcioncompra"> </p><br />
+        		<p  id="preciocompra"> </p><br />
+        		<p id="cuotascompra"> </p><br />
+        		</div>
+        		</td>
+        		<td>
+        		<form id="tpfinal">
+        			
+        		
+        		<div id="formright">
+        		CANTIDAD:<input type="button" value="-" onclick="menosCantidad(item.precio);"/><input type="text" id="cantidad" disabled value="1"/><input type="button" value="+" onclick="masCantidad(item.precio);"/><br />
+        		
+        		
+        		
+        		TIPO DE PAGO:<br />
+        		<input type="radio" id="radiocontado" name="tipodepago" value="contado" checked onchange="radioCred(item.precio);"/>contado<br />
+        		<input type="radio" id="radiocredito" name="tipodepago" value="credito" onchange="radioCred(item.precio);"/>credito<br />
+        		<input type="radio" class="credradio" name="credcar" value="cred1"/><img class="credradio" src="credcard/1.png" />
+        		<input type="radio" class="credradio" name="credcar" value="cred2"/><img class="credradio" src="credcard/2.png" />
+        		<input type="radio" class="credradio" name="credcar" value="cred3"/><img class="credradio" src="credcard/3.png" />
+        		<input type="radio" class="credradio" name="credcar" value="cred4"/><img class="credradio" src="credcard/4.png" /><br />
+        		
+        		<input type="text" class="etiquetas" disabled value="NOMBRE:" /><input type="text" id="nombrecompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="FECHA DE NACIMIENTO:"/><input type="date" id="fechacompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="MAIL:"/><input type="text" id="mailcompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="TELEFONO:" /><input   type="text" id="telefonocompra" onclick="blanquear();"/><br />
+        		<input type="text" class="etiquetas" disabled value="DIRECCION:" /><input type="text" id="direccioncompra" onclick="blanquear();"/><br />
+        		<input type="button"  value="COMPRAR" onclick="efectuarCompra();"/><br />
+        		<input type="button" id="backbutton" value="VOLVER" onclick="cancelarCompra();" /><br />
+        		</div>	
+        	</form>	
+        	<select id="selectcuota" onchange="cuotasOnChange();">
+        			<option value="1cuota">1 Cuota </option>
+        			<option value="3cuota">3 Cuotas </option>
+        			<option value="6cuota">6 Cuotas </option>
+        	</select><br />
+        	</td>
+        	</tr>
+        	</table>
+        	
+        	
+        	<!-- TODO debo hace todas las funciones del form de compra.
+        		 TOD O En cantidad programar las funciones apretando el boton mas o menos aumente o disminuya la cantidad
+        		 TOD O los radios credcar estan ocultos por defecto, si elijo la opcion del radio tipodepago el valor credito mostrar los radios credcard
+        		 TODO Numero de telefono debe ser solo numero.
+        		 TODO Aceptar la compra te muestra un alert con todos los datos relevantes.
+        		 TODO hacer una pagina de inicio, con el menu puesto de una forma distinta, con un img que cambie las imagenes aleatorias y configurar la pagina de inicio para que se refresque cada x tiempo y cada carga cambia la imagen aleatoriamente.
+        		 //<!--#98bf21
+        		-->
+        </div>
+        <div id="pie">
+        	<a class="apie" href="#autor">Gero</a>
+        	<a class="apie" href="#materia">Pelw</a>
+        	<a class="apie" href="#carrera">Tecnicatura en diseño web.</a>
+        	<a class="apie" href="#fecha">Febrero 2015</a>
+        </div>
+    </body>
+</html>

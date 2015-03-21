@@ -1,0 +1,128 @@
+/****
+ * ESTILO de Gerardo Herrera.
+ * */
+/**
+ * @author Gerardo Herrera
+ * Para el final de la materia 
+ * "Programacion estatica y laboratorio web"
+ * de la carrera "Tecnicatura universitaria de desarrollo web"
+ * Febrero 2015
+ */
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	font-family: "Bradley Hand ITC";	
+}
+p{
+	font-family: "Bradley Hand ITC";
+}
+H1{
+	text-align: center;
+	background-color: #FFDDFF;
+}
+table{
+	margin-left:10%;
+	display: block;
+}
+ul{
+	list-style-type: none;
+	line-height: 2;
+	margin:30px;
+	padding:0;
+	/*display:inline;*/
+	overflow:hidden;		
+}
+#pie {
+	height:50px;
+	width:1080px
+	clear: both;
+	color:black;
+	position:absolute;
+	top:1000px;
+	left:100px;
+}
+.apie{
+	float:left;
+	display: none;
+}
+
+a:link, a:visited{
+	display:block;
+	text-align:center;
+	text-decoration:none;
+	padding:4px;
+	font-family: "Bradley Hand ITC";
+	font-size: 32;
+	color: #000000;
+    background-color: #ffccff;
+}
+li{
+	font-family: "Bradley Hand ITC";
+	font-size: 32;
+	/*display:inline;*/
+	float:left;
+	width: 180px;
+}
+div #formstyle{
+	border: 10px;
+	border-color:black;
+	background: red;
+}
+div #mainmenu{
+	font-family: "Bradley Hand ITC";	
+}
+input.dotmenu{
+	margin:0;
+	border-radius: 25px;
+	box-shadow:3px 3px 3px #888888;
+	width: 15px;
+	height: 15px;	
+}
+li a:hover, #home:hover{
+	background-color:#ffddff;
+}
+td{
+	width:300px;
+	height:400px;
+	margin-top: 0;
+}
+td:hover{
+	background-color: pink;
+}
+#catalogotable{
+	position:absolute;
+	top:10;
+	left:200;
+}
+#formulariocompra{
+	visibility: hidden;
+	position:absolute;
+	top:10;
+	left:200;
+	clear:both;
+}
+#cuotascompra{
+	font-weight: bold;
+}
+.credradio{
+	visibility:hidden;
+}
+#cantidad{
+	width:20px;
+}
+#preciocompra{
+	background-color:yellow;	
+}
+.etiquetas{
+	border:0 none;
+}
+#mainpageimg{
+	margin-left:300px;	
+}
+#indeximg{
+	padding:15px;
+	border: 10px black;
+	background-color:black;
+}
